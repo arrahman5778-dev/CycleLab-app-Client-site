@@ -10,7 +10,9 @@ const ManagmentInventory = () => {
   // fetch product
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get(`http://localhost:5000/product/${id}`);
+      const { data } = await axios.get(
+        `https://infinite-ocean-60425.herokuapp.com/product/${id}`
+      );
       setProduct(data?.data[0]);
     };
     fetchData();
@@ -20,7 +22,7 @@ const ManagmentInventory = () => {
   const CountHandel = () => {
     const quantity = parseInt(prevQuantity) - 1;
 
-    fetch(`http://localhost:5000/product/${id}`, {
+    fetch(`https://infinite-ocean-60425.herokuapp.com/product/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +49,7 @@ const ManagmentInventory = () => {
 
     const quantity = parseInt(newQuantity) + parseInt(prevQuantity);
 
-    fetch(`http://localhost:5000/product/${id}`, {
+    fetch(`https://infinite-ocean-60425.herokuapp.com/product/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

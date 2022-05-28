@@ -10,7 +10,9 @@ const ManageProduct = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get("http://localhost:5000/product");
+      const { data } = await axios.get(
+        "https://infinite-ocean-60425.herokuapp.com/product"
+      );
       if (!data?.success) return toast.error(data.error);
       setProducts(data?.data);
     };

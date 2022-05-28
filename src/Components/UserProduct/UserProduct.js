@@ -13,7 +13,7 @@ const UserProduct = ({ pd }) => {
   const deleteItems = (id, name) => {
     const deleteItems = window.confirm(`Want To Delete ${name} ?`);
     if (deleteItems) {
-      fetch(`http://localhost:5000/product/${id}`, {
+      fetch(`https://infinite-ocean-60425.herokuapp.com/product/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

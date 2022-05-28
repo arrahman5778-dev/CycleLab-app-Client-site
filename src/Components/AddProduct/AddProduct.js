@@ -23,7 +23,7 @@ const AddProduct = () => {
     console.log(product);
     try {
       const { data } = await axios.post(
-        `http://localhost:5000/product`,
+        `https://infinite-ocean-60425.herokuapp.com/product`,
         product
       );
 
