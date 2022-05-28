@@ -35,7 +35,7 @@ const MyProduct = () => {
       <h1 className="text-center text-4xl font-mono text-blue-700 font-bold mt-20">
         My Product
       </h1>
-      <hr className=" border-blue-800 mb-20 mt-3 w-1/2 mx-auto" />
+      <hr className="  mb-20 mt-3 w-1/2 mx-auto" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 md:px-20 mb-10 max-w-7xl mx-auto">
         {products.map((pd) => (
           <UserProduct key={pd._id} pd={pd}></UserProduct>
